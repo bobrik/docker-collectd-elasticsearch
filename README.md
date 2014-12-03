@@ -7,7 +7,7 @@ You only need docker to run this, elasticsearch to monitor and graphite to store
 
 ```
 docker run -d -e GRAPHITE_HOST=<graphite host> -e ES_HOST=<es host> \
-  -e ES_PORT=<es port> -e ES_CLUSTER=<es cluster name> bobrik/collectd-elasticsearch
+  -e ES_CLUSTER=<es cluster name> bobrik/collectd-elasticsearch
 ```
 
 Environment variables:
@@ -17,8 +17,8 @@ Environment variables:
 * `GRAPHITE_PREFIX` - prefix for metrics in graphite, `collectd.` by default.
 * `ES_CLUSTER` - elasticsearch cluster name to use in graphite.
 * `ES_HOST` - elasticsearch host to monitor.
-* `ES_PORT` - elasticsearch port number
-* `ES_VERSION` - `0.9` or `1.0` as in collectd-elasticsearch plugin, `1.0` by default
+* `ES_PORT` - elasticsearch port number, `9200` by default.
+* `ES_VERSION` - `0.9` or `1.0` as in collectd-elasticsearch plugin, `1.0` by default.
 
 # Authors
 

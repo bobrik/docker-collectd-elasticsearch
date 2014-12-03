@@ -30,7 +30,7 @@ LoadPlugin write_graphite
 
     <Module "elasticsearch">
         Host "{{ ES_HOST }}"
-        Port "{{ ES_PORT }}"
+        Port "{{ ES_PORT | default("9200") }}"
         Cluster "{{ ES_CLUSTER }}"
         Version "{{ ES_VERSION | default("1.0") }}"
     </Module>
