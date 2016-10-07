@@ -2,6 +2,6 @@
 
 set -e
 
-envtpl /etc/collectd/collectd.conf.tpl
+envtpl --keep-template /etc/collectd/collectd.conf.tpl
 
 collectd -f
